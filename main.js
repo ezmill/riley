@@ -23,8 +23,8 @@ function initScene(){
     camera.position.set(0,0, 750);//test
     cameraRTT = new THREE.OrthographicCamera( w / - 2, w / 2, h / 2, h / - 2, -10000, 10000 );
 	cameraRTT.position.z = 100;
-// 
-	// controls = new THREE.OrbitControls(camera);
+
+	controls = new THREE.OrbitControls(camera);
 
 
     renderer = new THREE.WebGLRenderer({preserveDrawingBuffer:true});
@@ -192,7 +192,7 @@ function bezierX(rectWidth, rectHeight, offsetX, offsetY, x, hue){
     ctx.lineWidth = lineWidth;
     
     // line color
-    ctx.strokeStyle = "grey";
+    ctx.strokeStyle = hue;
     ctx.stroke();   
 }
 function bezierY(rectWidth, rectHeight, offsetX, offsetY, y, hue){
@@ -204,7 +204,7 @@ function bezierY(rectWidth, rectHeight, offsetX, offsetY, y, hue){
     ctx.lineWidth = lineWidth;
     
     // line color
-    ctx.strokeStyle = "grey";
+    ctx.strokeStyle = hue;
     ctx.stroke();   
 }
 var wy = w;
